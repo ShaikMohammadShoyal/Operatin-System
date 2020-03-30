@@ -81,7 +81,7 @@ def inputs(count):
             if (time>=1060 and time<1100) or (time>=1160 and time<=1200):
                 print("Invalid time type")
             elif time>=1000 and time<=1200:
-                t=int(input("1.TEACHER or 2.STUDENT ->"))
+                t=int(input("1.FACULTY or 2.STUDENT ->"))
                 if t==1:
                     q_id=input("Provide QUERY id ->")
                     if (q_id not in f_pid) and len(q_id)==4:
