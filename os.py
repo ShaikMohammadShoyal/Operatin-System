@@ -191,7 +191,6 @@ if __name__ == "__main__":
     s_rat=[]
     m_rat=[]
     m_rbt=[]
-    
     quer=int(input("Give Number of QUERIES ->"))
     quanta=int(input("\nGive the QUANTUM TIME ->"))
     inputs(quer)
