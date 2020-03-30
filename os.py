@@ -143,33 +143,36 @@ def turnaroundtime(m_wt,m_tat):
 
 
 def roundrobin():
-    m_wt = np.zeros(mc,dtype=int)
-    m_tat = np.zeros(mc,dtype=int)
-    waitingtime(m_wt)
-    turnaroundtime(m_wt,m_tat)
-    print("Execution table\n")
-    print('QueryID\t\t\tArrival Time\t\t\tExecution Time')
-    total_wt = 0
-    total_tat = 0
-    total_exe = 0
-    total = 0
-    sum = 0
-    for i in range(mc):
-        print()
-        total = m_ct[i]
-        sum += (m_ct[i]-m_bt[i])
-        total_wt = total_wt + m_wt[i]
-        total_tat= total_tat + m_tat[i]
-        total_exe= total_exe + m_bt[i]
-        print(m_pid[i],"\t\t\t",m_at[i],'\t\t\t\t',m_bt[i])
-    avg=sum/mc
-    print("\n\nAverage waiting time =  %.3f"%(total_wt/mc))
-    print("Average turn around time = %.3f"%(total_tat/mc))
-    print("Average excutiont ime = %.3f"%(total_exe/mc))
-    print("\nTotal time Spent on Queries = %d"%(total))
-    print("Average Query time = %.3f"%(avg))
-    print("\n\n\t\t\t\t\t\t\t\tTHANK YOU QUERIES ARE COMPLETED")
-
+    if mc==0:
+        print("No queries")
+    else:
+        m_wt = np.zeros(mc,dtype=int)
+        m_tat = np.zeros(mc,dtype=int)
+        waitingtime(m_wt)
+        turnaroundtime(m_wt,m_tat)
+        print("Execution table\n")
+        print('QueryID\t\t\tArrival Time\t\t\tExecution Time')
+        total_wt = 0
+        total_tat = 0
+        total_exe = 0
+        total = 0
+        sum = 0
+        for i in range(mc):
+            print()
+            total = m_ct[i]
+            sum += (m_ct[i]-m_bt[i])
+            total_wt = total_wt + m_wt[i]
+            total_tat= total_tat + m_tat[i]
+            total_exe= total_exe + m_bt[i]
+            print(m_pid[i],"\t\t\t",m_at[i],'\t\t\t\t',m_bt[i])
+        avg=sum/mc
+        print("\n\nAverage waiting time =  %.3f"%(total_wt/mc))
+        print("Average turn around time = %.3f"%(total_tat/mc))
+        print("Average excutiont ime = %.3f"%(total_exe/mc))
+        print("\nTotal time Spent on Queries = %d"%(total))
+        print("Average Query time = %.3f"%(avg))
+        print("\n\n\t\t\t\t\t\t\t\tTHANK YOU QUERIES ARE COMPLETED")
+        input()
 
 if __name__ == "__main__":
     print("\n\t\t\t\t\t\t\t\t\t\tWELCOME TO DOUBT CLEARING SESSION\n\n\n")
