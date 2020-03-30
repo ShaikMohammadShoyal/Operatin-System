@@ -1,3 +1,4 @@
+import numpy as np
 def merger():
     fc=len(f_pid)
     sc=len(s_pid)
@@ -115,7 +116,7 @@ def inputs(count):
 
 
 def waitingtime(m_wt):
-    rem_bt = [0]*mc
+    rem_bt = np.zeros(mc,dtype=int)
     for i in range(mc):
         rem_bt[i] = m_bt[i]
     t=0
@@ -142,8 +143,8 @@ def turnaroundtime(m_wt,m_tat):
 
 
 def roundrobin():
-    m_wt = [0]*mc
-    m_tat = [0]*mc
+    m_wt = np.zeros(mc,dtype=int)
+    m_tat = np.zeros(mc,dtype=int)
     waitingtime(m_wt)
     turnaroundtime(m_wt,m_tat)
     print("Execution table\n")
@@ -179,7 +180,19 @@ if __name__ == "__main__":
     print("* give the data according to arrival\n\n")
     input(("______PRESS ENTER TO CONTINUE______\n\n\n"))
     
-    f_pid = s_pid = m_pid = f_at = s_at = m_at = f_bt = s_bt = m_bt = f_rat = s_rat = m_rat = m_rbt=[]
+    f_pid=[]
+    s_pid=[]
+    m_pid=[]
+    f_at=[]
+    s_at=[]
+    m_at=[]
+    f_bt=[]
+    s_bt=[]
+    m_bt=[]
+    f_rat=[]
+    s_rat=[]
+    m_rat=[]
+    m_rbt=[]
     
     quer=int(input("Give Number of QUERIES ->"))
     quanta=int(input("\nGive the QUANTUM TIME ->"))
