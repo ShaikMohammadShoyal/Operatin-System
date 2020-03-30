@@ -178,19 +178,9 @@ if __name__ == "__main__":
     print("* qury id should be length 4")
     print("* give the data according to arrival\n\n")
     input(("______PRESS ENTER TO CONTINUE______\n\n\n"))
-    f_pid=[]
-    s_pid=[]
-    m_pid=[]
-    f_at=[]
-    s_at=[]
-    m_at=[]
-    f_bt=[]
-    s_bt=[]
-    m_bt=[]
-    f_rat=[]
-    s_rat=[]
-    m_rat=[]
-    m_rbt=[]
+    
+    f_pid = s_pid = m_pid = f_at = s_at = m_at = f_bt = s_bt = m_bt = f_rat = s_rat = m_rat = m_rbt=[]
+    
     quer=int(input("Give Number of QUERIES ->"))
     quanta=int(input("\nGive the QUANTUM TIME ->"))
     inputs(quer)
