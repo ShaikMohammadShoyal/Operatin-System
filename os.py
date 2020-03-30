@@ -177,7 +177,7 @@ if __name__ == "__main__":
     print("* query id only in interger form")
     print("* qury id should be length 4")
     print("* give the data according to arrival\n\n")
-    input(("______PRESS ENTER TO CONTINUE______\n\n\n").lower())
+    input(("______PRESS ENTER TO CONTINUE______\n\n\n"))
     f_pid=[]
     s_pid=[]
     m_pid=[]
